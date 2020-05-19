@@ -3,22 +3,29 @@
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "ControlRigExt",
-	"Description": "",
-	"Category": "Other",
-	"CreatedBy": "",
+	"Description": "Extension module for the Epic ControlRig plugin",
+	"Category": "Animation",
+	"CreatedBy": "Technically Games",
 	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
 	"CanContainContent": true,
-	"IsBetaVersion": false,
+	"IsBetaVersion": true,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+	"Plugins":
+	[
+		{
+			"Name": "ControlRig",
+			"Enabled": true
+		}
+	],
 	"Modules": [
 		{
 			"Name": "ControlRigExt",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "PreDefault"
 		}
 	]
 }

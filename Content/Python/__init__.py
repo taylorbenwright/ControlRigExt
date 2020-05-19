@@ -1,0 +1,1 @@
+print('Control Rig Extension plugin loaded!')
