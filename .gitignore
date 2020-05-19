@@ -3,3 +3,4 @@ Binaries/
 .idea/
 
 /Content/Python/.idea/
+/Content/Python/__pycache__/
