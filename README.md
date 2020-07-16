@@ -46,4 +46,4 @@ Afterwards, you will then go to File->Refresh All Nodes and Save
 
 You will also need to do it for the EUW_ControlRigRenameTool
 
-![EUW_ControlRigRenameTool Navigation](Resources/README/Navigate_To_EUW2.PNG)
+![EUW_ControlRigRenameTool Navigation](Resources/README/Navigate_To_EUW_2.PNG)
