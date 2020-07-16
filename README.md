@@ -16,11 +16,11 @@ Navigate to the ControlRigExt Content folder and open up EUW_ControlRigTools
 
 Right click on it, and hit Run Editor Utility Widget
 
-![Right Click Run EUW](Right_Click_Run_EUW.PNG)
+![Right Click Run EUW](Resources/README/Right_Click_Run_EUW.PNG)
 
 Once you have done that, you can now run your Editor Utility Widget in Window->Editor Utility Widget
 
-![Window Menu Run EUW](Menu_Run_EUW.PNG)
+![Window Menu Run EUW](Resources/README/Menu_Run_EUW.PNG)
 
 # Troubleshooting
 
