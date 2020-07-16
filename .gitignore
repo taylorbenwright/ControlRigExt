@@ -4,3 +4,4 @@ Binaries/
 
 /Content/Python/.idea/
 /Content/Python/__pycache__/
+*.pyc
