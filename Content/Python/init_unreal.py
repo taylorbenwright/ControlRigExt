@@ -234,6 +234,28 @@ class ControlRigBPExt(unreal.BlueprintFunctionLibrary):
             rig_element.set_editor_property("gizmo_enabled", is_enabled)
             hierarchy_mod.set_control(rig_element)
 
+    @unreal.ufunction(params=[unreal.ControlRigBlueprint, str], static = True, meta=dict(Category="Control Rig Blueprint Ext"))
+    def EditGizmoName(rig, gizmo_name):
+        """
+        Given a name, set selected controls' gizmo to that name
+        :param rig: The control rig object
+        :type rig: unreal.ControlRigBlueprint
+        :param gizmo_name: Gizmo name
+        :type gizmo_name: str
+        :return: Nothing
+        :rtype: None
+        """
+
+        hierarchy_mod = rig.get_hierarchy_modifier()
+        selection = hierarchy_mod.get_selection()
+
+        rig_elements = control_rig_utils.get_elements_by_rig_type(rig, selection, unreal.RigControl)
+
+        for rig_element in rig_elements:
+    
+            rig_element.set_editor_property("gizmo_name", gizmo_name)
+            hierarchy_mod.set_control(rig_element)
+
     @unreal.ufunction(params=[unreal.ControlRigBlueprint, str, str], static = True, meta=dict(Category="Control Rig Blueprint Ext"))
     def SearchAndReplaceRigElementNames(rig, search_string, replace_string):
         """
@@ -329,5 +351,27 @@ class ControlRigBPExt(unreal.BlueprintFunctionLibrary):
             hierarchy_mod.rename_element(item, new_name)
 
             x+=1
+
+    @unreal.ufunction(params=[unreal.ControlRigBlueprint], ret=unreal.Array(str), static = True, meta=dict(Category="Control Rig Blueprint Ext"))
+    def GetControlGizmoListFromRig(rig):
+        """
+        Get a list of gizmo names from rig
+        :param rig: The control rig object
+        :type rig: unreal.ControlRigBlueprint
+        :return: Nothing
+        :rtype: None
+        """
+        
+        gizmo_library = rig.get_editor_property("gizmo_library")
+
+        gizmos = gizmo_library.get_editor_property("gizmos")
+
+        gizmo_names = []
+
+        for gizmo in gizmos:
+
+            gizmo_names.append(gizmo.get_editor_property("gizmo_name"))
+
+        return gizmo_names
 
 print("Control Rig Ext Loaded")
